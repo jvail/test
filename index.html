@@ -8,10 +8,10 @@
   
   <script type="text/javascript">
   	
-	fetch('https://jvail.github.io/test/preview.jp2', { method: 'HEAD' })
+	fetch('preview.jp2', { method: 'HEAD' })
   		.then(res => [...res.headers]).then(headers => console.log(headers));
 
-  	fetch('https://jvail.github.io/test/preview.jp2', { 
+  	fetch('preview.jp2', { 
   		method: 'GET',
   		headers: {
 			Range: 'bytes=0-100'
