@@ -7,16 +7,6 @@
   <body>
   
   <script type="text/javascript">
-  	
-	fetch('preview.jp2', { method: 'HEAD' })
-  		.then(res => [...res.headers]).then(headers => console.log(headers));
-
-  	fetch('preview.jp2', { 
-  		method: 'GET',
-  		headers: {
-			Range: 'bytes=0-100'
-		}
-  	}).then(res => res.arrayBuffer()).then(data => console.log(data));
 
   	fetch('../io/data/sentinel/T32UMA_20190629T103031/T32UMA_20190629T103031_AOT_20m.jp2', { method: 'HEAD' })
   		.then(res => [...res.headers]).then(headers => console.log(headers));
