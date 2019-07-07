@@ -8,13 +8,13 @@
   
   <script type="text/javascript">
 
-  	fetch('../io/data/sentinel/T32UMA_20190629T103031/T32UMA_20190629T103031_AOT_20m.jp2', { method: 'HEAD' })
+  	fetch('../io/data/sentinel/T32UMA_20190629T103031/T32UMA_20190629T103031_B02_20m.jp2', { method: 'HEAD' })
   		.then(res => [...res.headers]).then(headers => console.log(headers));
 
-  	fetch('../io/data/sentinel/T32UMA_20190629T103031/T32UMA_20190629T103031_AOT_20m.jp2', { 
+  	fetch('../io/data/sentinel/T32UMA_20190629T103031/T32UMA_20190629T103031_B02_20m.jp2', { 
   		method: 'GET',
   		headers: {
-			Range: 'bytes=0-100'
+			Range: 'bytes=0-1023'
 		}
   	}).then(res => res.arrayBuffer()).then(data => console.log(data));
 
