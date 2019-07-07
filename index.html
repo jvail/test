@@ -18,6 +18,16 @@
 		}
   	}).then(res => res.arrayBuffer()).then(data => console.log(data));
 
+  	fetch('../io/data/sentinel/B01.jp2', { method: 'HEAD' })
+  		.then(res => [...res.headers]).then(headers => console.log(headers));
+
+  	fetch('../io/data/sentinel/B01.jp2', { 
+  		method: 'GET',
+  		headers: {
+			Range: 'bytes=0-100'
+		}
+  	}).then(res => res.arrayBuffer()).then(data => console.log(data));
+
   </script>
   
     
